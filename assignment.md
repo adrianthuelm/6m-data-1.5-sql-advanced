@@ -38,7 +38,8 @@ Answer:
 
 ```
 
-## Submission
+## **Project Assignment: "The Underwriter's Report"**
 
-- Submit the URL of the GitHub Repository that contains your work to NTU black board.
-- Should you reference the work of your classmate(s) or online resources, give them credit by adding either the name of your classmate or URL.
+**Task:** Create a report using a **CTE** that lists the top 3 clients (by total claim\_amt) in each city.
+
+* **Requirements:** Must use at least one Join, one Window Function (RANK), and one CTE.
