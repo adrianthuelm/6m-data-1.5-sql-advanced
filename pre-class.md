@@ -19,7 +19,8 @@ Think of a database like a library.
 In basic SQL, we ask simple questions: "Show me all clients."  
 In advanced SQL, we ask analytical questions: "Show me the top 10% of clients based on their insurance claim history compared to their peers in the same city."
 
-## **Watch this video:** https://youtu.be/1YS3ieGgSFU
+## **Watch this video:** 
+https://youtu.be/1YS3ieGgSFU
 
 ### **Self-Study Task:**
 
