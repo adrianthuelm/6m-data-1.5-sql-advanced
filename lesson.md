@@ -325,6 +325,24 @@ FROM claim;
 
 > Return a table containing `id, car_id, claim_amt, running_total` from claim, where `running_total` is the running sum of the `claim_amt` column for each `car_id`.
 
+**Exercise 3:**  
+
+Calculate a running total of insurance payouts over time (ordered by claim_date).  
+
+<details>
+
+  <summary>Solution for Running Total</summary>
+  
+```sql
+SELECT   
+    claim_date, claim_amt,  
+    SUM(claim_amt) OVER (ORDER BY claim_date) AS running_total  
+FROM claim;  
+```
+</details>
+
+
+
 #### Rank
 
 `RANK()` is a window function that gives each row a position (1st, 2nd, 3rd, …) within a group, allowing **ties** to share the same rank and leaving gaps after ties.
@@ -399,22 +417,6 @@ SELECT
 FROM claim  
 QUALIFY rank = 1; -- DuckDB specific 'QUALIFY' to filter windows  
 ```
-
-**Exercise 3:**  
-
-Calculate a running total of insurance payouts over time (ordered by claim_date).  
-
-<details>
-
-  <summary>Solution for Running Total</summary>
-  
-```sql
-SELECT   
-    claim_date, claim_amt,  
-    SUM(claim_amt) OVER (ORDER BY claim_date) AS running_total  
-FROM claim;  
-```
-</details>
 
 
 ## **Part 3: Nested Logic (Subqueries & CTEs)**
